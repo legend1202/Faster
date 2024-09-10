@@ -1,0 +1,162 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fooddelivery.Login3">
+
+    <!--<TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Verifica tu número "
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp" />-->
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="30dp"
+        android:text="Ingresa a Faster con tu número celular"
+        android:fontFamily="@font/kamerik"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:textStyle="normal" />
+
+    <Spinner
+        android:id="@+id/spinnerCountries"
+        android:layout_width="150dp"
+        android:layout_height="48sp"
+        android:layout_below="@id/textView1"
+        android:layout_centerHorizontal="true"
+        android:spinnerMode="dropdown"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerCountries"
+        android:orientation="horizontal"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_prefijo"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:focusable="false">
+
+            <EditText
+                android:id="@+id/editTextPrefijo"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:focusable="false"
+                android:hint=""
+                android:inputType="text"
+                android:textAlignment="viewStart"
+                android:textColor="#000"
+                android:textSize="@dimen/medium"
+                tools:ignore="SpUsage" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_numero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true">
+
+            <EditText
+                android:id="@+id/editTextNumero"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_weight="3"
+                android:hint="Escribe tu número"
+                android:focusable="true"
+                android:inputType="phone"
+                android:digits="0123456789"
+                android:maxLength="10"
+                android:textAlignment="viewStart"
+                android:textColor="#000"
+                android:textSize="@dimen/medium"
+                tools:ignore="SpUsage" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:fontFamily="@font/segoeuil"
+        android:text="Enviaremos un mensaje a este número con un código de confirmación."
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginBottom="80dp" >
+
+        <Button
+            android:id="@+id/Siguiente4"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_marginLeft="80sp"
+            android:layout_marginRight="80sp"
+            android:layout_centerInParent="true"
+            android:backgroundTint="@color/sms_button"
+            android:text="Recibir código por SMS"
+            android:fontFamily="@font/kamerik"
+            android:textAllCaps="false"
+            android:textColor="#FFF"
+            android:textSize="14sp"
+            tools:ignore="SpUsage" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginBottom="30dp" >
+
+        <Button
+            android:id="@+id/Siguiente5"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_marginLeft="80sp"
+            android:layout_marginRight="80sp"
+            android:layout_centerInParent="true"
+            android:backgroundTint="@color/otp_whatsapp"
+            android:text="Recibir código por WhatsApp"
+            android:fontFamily="@font/kamerik"
+            android:textAllCaps="false"
+            android:textColor="#FFF"
+            android:textSize="14sp"
+            tools:ignore="SpUsage" />
+    </LinearLayout>
+
+</RelativeLayout>

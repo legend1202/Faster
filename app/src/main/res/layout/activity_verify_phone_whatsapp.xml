@@ -1,0 +1,151 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fooddelivery.VerifyPhoneWhatsApp">
+
+    <TextView
+        android:id="@+id/txtvtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Verifica tu número "
+        android:fontFamily="@font/kamerik"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtvtexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtvtitulo"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginRight="20sp"
+        android:fontFamily="@font/segoeuil"
+        android:textSize="16sp"
+        android:text="Ingresa el código que enviamos a tu WhatsApp."
+        android:textAlignment="center"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtvtexto"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_delivery" >
+
+            <EditText
+                android:id="@+id/editTextCode"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:digits="0123456789"
+                android:inputType="phone"
+                android:hint="Código de verificación"
+                android:maxLength="6"
+                android:textSize="35dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+            <!--<TextView
+                android:id="@+id/editTextNombre"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_weight="2"
+                android:inputType="text"
+                android:gravity="left"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="@dimen/medium"
+                tools:ignore="SpUsage" /> -->
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="160dp"
+                android:layout_height="20dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:inputType="text"
+                android:text="segundos"
+                android:textColor="@color/btn_press_color"
+                android:textSize="15dp"
+                tools:ignore="SpUsage" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="40dp">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_weight="2"
+            android:text="Volver a enviar SMS"
+            android:inputType="text"
+            android:gravity="center"
+            android:textColor="@color/btn_press_color"
+            android:textSize="15dp"
+            tools:ignore="SpUsage"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:layout_below="@id/linearLayout"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <Button
+            android:id="@+id/send_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:fontFamily="@font/kamerik"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Ingresar"
+            android:backgroundTint="@color/otp_whatsapp"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</RelativeLayout>

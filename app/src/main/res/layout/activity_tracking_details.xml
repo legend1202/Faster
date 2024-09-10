@@ -1,0 +1,403 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rel_main4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <RelativeLayout
+            android:id="@+id/rel_main2"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/toolbar_layout"
+            android:layout_margin="0dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/ll_order_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txt_order_time_title"
+                                style="@style/orderTextView"
+                                android:layout_marginStart="16dp"
+                                android:text="@string/txt_order_time" />
+
+                            <TextView
+                                android:id="@+id/txt_order_time"
+                                style="@style/orderTextView"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="16dp"
+                                android:text=""
+                                android:textAlignment="viewStart" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txt_order_amount_title"
+                                style="@style/orderTextView"
+                                android:layout_marginStart="16dp"
+                                android:text="@string/txt_order_amount" />
+
+                            <TextView
+                                android:id="@+id/txt_order_amount"
+                                style="@style/orderTextView"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="16dp"
+                                android:text=""
+                                android:textAlignment="viewStart" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txt_delivery_price_title"
+                                style="@style/orderTextView"
+                                android:layout_marginStart="16dp"
+                                android:text="@string/txt_delivery_price" />
+
+                            <TextView
+                                android:id="@+id/txt_delivery_price"
+                                style="@style/orderTextView"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="16dp"
+                                android:text=""
+                                android:textAlignment="viewStart" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txt_total_price_title"
+                                style="@style/orderTextView"
+                                android:layout_marginStart="16dp"
+                                android:text="@string/txt_total_price"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/txt_total_price"
+                                style="@style/orderTextView"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="16dp"
+                                android:text=""
+                                android:textAlignment="viewStart" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/order_timeline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ll_order_details"
+                        android:layout_marginTop="8dp"
+                        android:background="#EAEBED">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/time_line"
+                            android:layout_width="match_parent"
+                            android:paddingBottom="10dp"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/order_timeline">
+
+                        <TextView
+                            android:id="@+id/txt_order_title"
+                            style="@style/orderTextView"
+                            android:layout_marginStart="16dp"
+                            android:text=""
+                            android:textAlignment="viewStart" />
+
+                        <TextView
+                            android:id="@+id/txt_order_timer"
+                            style="@style/orderTextView"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="16dp"
+                            android:text=""
+                            android:textSize="20dp"
+                            android:textAlignment="viewStart" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.974"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <faster.com.ec.utils.RoundedImageView
+                        android:id="@+id/image"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:fitsSystemWindows="true"
+                        android:requiresFadingEdge="horizontal"
+                        android:scaleType="fitXY" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="220dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayout4"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp">
+
+                    <TextView
+                        android:id="@+id/txt_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:lines="1"
+                        android:text=""
+                        android:textColor="@color/colorAccent"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/txt_descripcion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="2"
+                        android:text=""
+                        android:textSize="12dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageButton
+                        android:id="@+id/btn_menu"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/btn_menu" />
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rel_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#ff9e00">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/divider1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/btn_call"
+                        app:tint="@color/white" />
+
+                    <Button
+                        android:id="@+id/btn_call"
+                        style="@style/Delivery_button"
+                        android:layout_width="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="start|center_vertical"
+                        android:text="Llamar"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/louisgeorgecafe"
+                        android:textSize="16dp"
+                        tools:ignore="SpUsage" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/divider1"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:src="@color/black" />
+
+            <RelativeLayout
+                android:id="@+id/rel_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/divider1" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_marginEnd="8dp"
+                        app:tint="@color/white"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/cart_icon_fab" />
+
+                    <Button
+                        android:id="@+id/txt_orderno"
+                        style="@style/Delivery_button"
+                        android:layout_width="wrap_content"
+                        android:text="Ver Orden"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/louisgeorgecafe"
+                        android:textSize="16dp"
+                        tools:ignore="SpUsage" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_fourth2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#000000"
+            android:layout_alignParentBottom="true">
+
+            <RelativeLayout
+                android:id="@+id/rela_call"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/btn_call_icono"
+                        android:layout_width="18dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/btn_call"
+                        android:color="#ffffff"/>
+
+                    <Button
+                        android:id="@+id/btn_call_rider"
+                        style="@style/Delivery_button"
+                        android:layout_width="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="start|center_vertical"
+                        android:text="Llamar Rider"
+                        android:textColor="@color/white"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/louisgeorgecafe"
+                        tools:ignore="SpUsage" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

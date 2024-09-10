@@ -1,0 +1,34 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="toolbarheight">50dp</dimen>
+    <dimen name="toolbartitle">20dp</dimen>
+    <dimen name="large">18dp</dimen>
+    <dimen name="small">14dp</dimen>
+    <dimen name="tiny">11dp</dimen>
+    <dimen name="medium">16dp</dimen>
+    <dimen name="dp_12">12dp</dimen>
+
+  <!--Detail Screen TimeLine FontSize-->
+    <dimen name="dimen_detail_title">12dp</dimen>
+    <dimen name="dimen_detail_subtitle">12dp</dimen>
+    <dimen name="dimen_detail_p">11dp</dimen>
+    <dimen name="dimen_toolbar">50dp</dimen>
+    <dimen name="dp_13">13dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="default_circle_indicator_stroke_width">1dp</dimen>
+    <dimen name="default_indicator_margin_horizontal">10dp</dimen>
+    <dimen name="default_indicator_margin_vertical">25dp</dimen>
+    <dimen name="default_circle_indicator_radius">3dp</dimen>
+
+    <dimen name="google_1x">8dp</dimen>
+    <dimen name="ccp_padding">8dp</dimen>
+    <dimen name="fastscroll__bubble_corner">20dp</dimen>
+    <dimen name="fastscroll__bubble_size">50dp</dimen>
+    <dimen name="fastscroll__handle_corner">3dp</dimen>
+    <dimen name="fastscroll__handle_height">30dp</dimen>
+    <dimen name="fastscroll__handle_width">6dp</dimen>
+    <dimen name="fastscroll__handle_inset">9dp</dimen>
+    <dimen name="fastscroll__handle_clickable_width">24dp</dimen>
+    <dimen name="fastscroll__handle_padding">2dp</dimen>
+</resources>

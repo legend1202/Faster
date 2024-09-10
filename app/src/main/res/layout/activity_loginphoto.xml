@@ -1,0 +1,170 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fooddelivery.Loginphoto">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Mi perfil"
+        android:fontFamily="@font/kamerik"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+
+    <ScrollView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/txtvtexto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="5dp"
+                android:fontFamily="@font/segoeuil"
+                android:text="Por favor ingresa tu nombre y apellido como se muestra en la cédula."
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:textColor="@color/black" />
+
+            <faster.com.ec.utils.RoundedImageView
+                android:id="@+id/img_user"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/txtvtexto"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/profile_reg" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtvtexto"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_apellido"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_delivery"
+                    android:layout_marginTop="50dp">
+
+                    <EditText
+                        android:id="@+id/editTextApellido"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:hint="Nombre y Apellido"
+                        android:inputType="text"
+                        android:gravity="center"
+                        android:textColor="#000"
+                        android:textSize="@dimen/dp_13"
+                        android:fontFamily="@font/kamerik"
+                        tools:ignore="SpUsage"
+                        android:digits="qwertyuiopasdfghjklzxcvbnñmáéíóú QWERTYUIOPASDFGHJKLZXCVBNÑMÁÉÍÓÚ"
+                        android:autofillHints="" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            </LinearLayout>
+
+            <!--<LinearLayout
+                android:id="@+id/rel_camara"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_below="@+id/linearLayout"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/camera"
+                    android:layout_width="210dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/camera_btn"
+                    android:text="@string/txt_take_a_picture"
+                    android:textColor="#000000"
+                    android:gravity="bottom|right"
+                    android:paddingBottom="2dp"
+                    android:paddingRight="20dp" />
+
+                <Button
+                    android:layout_width="210dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/gallery"
+                    android:background="@drawable/gallery_btn"
+                    android:text="@string/txt_select_picture"
+                    android:textColor="#000000"
+                    android:gravity="bottom|left"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="14dp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp">
+
+            </RelativeLayout>-->
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginBottom="25dp">
+
+        <Button
+            android:id="@+id/Siguiente5"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/linearLayout"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/kamerik"
+            android:backgroundTint="@color/res_green"
+            android:text="Siguiente"
+            android:textAllCaps="false"
+            android:textColor="#FFF"
+            android:textSize="14dp"
+            tools:ignore="SpUsage" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

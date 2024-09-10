@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff9e00</color>
+    <color name="colorPrimaryDark">#ff9e00</color>
+    <color name="colorAccent">#3C3C3C</color>
+
+    <color name="green">#ffffff</color>
+    <color name="orange">#F27466</color>
+    <color name="toolbarcolor">#303C44</color>
+    <color name="orderbg">#88898b</color>
+    <color name="colormark">#ff9e00</color>
+    <color name="res_green">#0dde00</color>
+    <color name="res_orange">#E76232</color>
+    <color name="light_grey">#C6CACD</color>
+    <color name="my_statusbar_color">#ff9e00</color>
+    <color name="txt_orange">#ff9e00</color>
+    <color name="txt_white">#ff9e00</color>
+    <color name="txt_text">#acb0b3</color>
+    <color name="green2">#0a9701</color>
+
+    <!--Main text color-->
+    <color name="darkGrey">#535252</color>
+    <color name="lightGrey">#747474</color>
+    <color name="dorado">#ffff00</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="red">#ff0000</color>
+    <color name="delivery">#2abb9b</color>
+    <color name="green3">#48dd79</color>
+    <color name="otp_whatsapp">#43cd66</color>
+    <color name="sms_button">#6b0091</color>
+    <color name="menu_name">#5a5757</color>
+
+    <color name="trans_black">#33000000</color>
+    <color name="default_circle_indicator_fill_color">#FFFFFFFF</color>
+    <color name="default_circle_indicator_page_color">#00000000</color>
+    <color name="default_circle_indicator_stroke_color">#FFDDDDDD</color>
+
+    <color name="test">#221224</color>
+    <color name="defaultContentColor">@android:color/black</color>
+    <color name="defaultBorderFlagColor">@android:color/transparent</color>
+    <color name="pressed_bg">#64b7b7b7</color>
+</resources>

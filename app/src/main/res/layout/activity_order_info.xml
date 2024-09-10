@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fooddelivery.OrderInfo">
+
+    <RelativeLayout
+        android:id="@+id/rel_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbarheight"
+        android:background="@color/colorPrimary">
+
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/ib_back"
+            android:gravity="center"
+            android:text="Tu pedido"
+            android:fontFamily="@font/kamerik"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/toolbartitle"
+            tools:ignore="SpUsage" />
+
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rel_title"
+        android:paddingLeft="16dp"
+        android:paddingTop="5dp"
+        android:paddingRight="16dp"
+        android:stretchColumns="1">
+
+        <TextView
+            android:id="@+id/txt_notita2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/kamerik"
+            android:padding="0dip"
+            android:text="Dirección de Envío:"
+            android:textColor="#000000"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_direccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_name"
+            android:layout_marginTop="3dp"
+            android:maxLines="3"
+            android:paddingStart="0dp"
+            android:paddingEnd="20dp"
+            android:text="direccion"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/louisgeorgecafe"
+            android:textSize="@dimen/small"
+            tools:ignore="SpUsage" />
+
+
+        <TextView
+            android:id="@+id/txt_total_order"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_column="0"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/kamerik"
+            android:gravity="center"
+            android:padding="1dp"
+            android:text="Valor a pagar: $20,50"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18dp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp">
+
+            <TextView
+                android:id="@+id/txt_modopago"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:padding="1dip"
+                android:text="Pago en efectivo"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:fontFamily="@font/kamerik" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioGroup
+                android:id="@+id/opciones_pago"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0">
+
+                <RadioButton
+                    android:id="@+id/radio1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/colorPrimary"
+                    android:checked="true"
+                    android:fontFamily="@font/kamerik"
+                    android:textSize="12dp"
+                    android:text="Pagaré el monto exacto" />
+
+                <RadioButton
+                    android:id="@+id/radio2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/kamerik"
+                    android:textSize="12dp"
+                    android:buttonTint="@color/colorPrimary"
+                    android:text="Pagaré con un monto mayor" />
+
+
+            </RadioGroup>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt_amount_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_above="@+id/txt_notes_input"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="5dp"
+                android:focusable="false"
+                android:hint="Monto $"
+                android:maxLines="2"
+                android:textSize="18dp"
+                android:visibility="invisible"
+                tools:ignore="SpUsage">
+
+                <EditText
+                    android:id="@+id/edt_amount_pay"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:textColor="#000"
+                    android:textSize="@dimen/medium"
+                    tools:ignore="SpUsage" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/txt_modopago2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:padding="1dip"
+                android:text="Datos de facturación"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:fontFamily="@font/kamerik"/>
+
+        </TableRow>
+
+
+        <RadioGroup
+            android:id="@+id/opciones_fact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radiofc1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:buttonTint="@color/colorPrimary"
+                android:checked="true"
+                android:fontFamily="@font/kamerik"
+                android:textSize="12dp"
+                android:text="Consumidor Final" />
+
+            <RadioButton
+                android:id="@+id/radiofc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:checked="false"
+                android:fontFamily="@font/kamerik"
+                android:textSize="12dp"
+                android:text="Usar mi información " />
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/txt_notita1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/louisgeorgecafe"
+            android:padding="3dip"
+            android:text="Nota: El valor de envío no se incluirá en la factura de la tienda."
+            android:textColor="#000000"
+            android:textSize="12dp"
+            android:textStyle="normal" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_dni_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txt_notes_input"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="5dp"
+            android:focusable="false"
+            android:hint="Cédula, Pasaporte o RUC"
+            android:maxLines="2"
+            android:textSize="18dp"
+            android:visibility="invisible"
+            app:counterMaxLength="13"
+            tools:ignore="SpUsage">
+
+            <EditText
+                android:id="@+id/edt_dni"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:maxLength="16"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:textColor="#000"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/kamerik"
+                tools:ignore="SpUsage" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_nombre_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txt_notes_input"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="5dp"
+            android:focusable="false"
+            android:hint="Nombre y Apellido"
+            android:maxLines="2"
+            android:textSize="18dp"
+            android:visibility="invisible"
+            tools:ignore="SpUsage">
+
+            <EditText
+                android:id="@+id/edt_nombre"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPostalAddress"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:textColor="#000"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/kamerik"
+                tools:ignore="SpUsage" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_telefono_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txt_notes_input"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="5dp"
+            android:focusable="false"
+            android:hint="Teléfono"
+            android:maxLines="2"
+            android:textSize="18dp"
+            android:visibility="invisible"
+            tools:ignore="SpUsage">
+
+            <EditText
+                android:id="@+id/edt_telefono"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPostalAddress"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:textColor="#000"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/kamerik"
+                tools:ignore="SpUsage" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </TableLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rel_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_orderinfo"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/checkout_btn"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="@font/kamerik"
+            android:text="Hacer pedido"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            tools:ignore="SpUsage" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

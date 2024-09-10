@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F4F4F4"
+    tools:ignore="SpUsage,ContentDescription">
+
+    <RelativeLayout
+        android:id="@+id/rel_header"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/toolbarheight"
+        android:background="@color/colorPrimary">
+
+        <ImageButton
+            android:id="@+id/drawerBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_menu_24"
+            android:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/selecAddressBtn1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="16dp"
+            android:fontFamily="@font/louisgeorgecafe"
+            android:layout_toStartOf="@+id/selecAddressBtn2"
+            android:layout_toEndOf="@+id/drawerBtn"
+            android:text="@string/txt_map"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/large"
+            tools:ignore="SpUsage" />
+
+        <ImageButton
+            android:id="@+id/selecAddressBtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+            android:tint="@color/white" />
+
+    </RelativeLayout>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rel_header">
+
+        <RelativeLayout
+            android:id="@+id/rel_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_infodialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/rel_search"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/search_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/img_search"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/search" />
+
+                    <EditText
+                        android:id="@+id/edit_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_alignStart="@+id/img_search"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="28dp"
+                        android:background="@android:color/transparent"
+                        android:digits="abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ1234567890 '"
+                        android:focusable="true"
+                        android:fontFamily="@font/kamerik"
+                        android:hint="@string/search"
+                        android:imeOptions="actionSearch"
+                        android:inputType="textEmailAddress"
+                        android:lines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/darkGrey"
+                        android:textColorHighlight="#FFFFFF"
+                        android:textColorHint="@color/light_grey"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/btn_speech"
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/microphone_icon" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rel_search"
+                android:layout_marginTop="5dp">
+
+                <com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout
+                    android:id="@+id/swipeRefreshLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srl_direction="top">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <!--android:scrollbars="vertical" -->
+                </com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout>
+                <!-- </ListView>-->
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="start"
+            android:background="#ffffff"
+            android:clickable="true"
+            android:focusable="true"
+            android:importantForAccessibility="no"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/ll_profile"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:background="#ffffff"
+                android:orientation="horizontal">
+
+                <faster.com.ec.utils.RoundedImageView
+                    android:id="@+id/img_profile"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"/>
+                <!--android:background="@drawable/yes_icon" -->
+
+                <RelativeLayout
+                    android:layout_width="270dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/img_profile"
+                    android:orientation="vertical">
+                    <!--android:background="@drawable/sidebar_btn_bg" -->
+
+                    <TextView
+                        android:id="@+id/txt_perfil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:lines="1"
+                        android:text="Hola"
+                        android:fontFamily="@font/louisgeorgecafe"
+                        android:textColor="@color/darkGrey"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/txt_nameuser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_perfil"
+                        android:text="Cliente"
+                        android:lines="1"
+                        android:fontFamily="@font/kamerik"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/ll_profile">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_perfil"
+                        style="@style/navLinearLayout">
+
+                        <ImageView
+                            style="@style/navImageView"
+                            android:background="@mipmap/perfil" />
+
+                        <TextView
+                            android:id="@+id/txt_profile"
+                            style="@style/navTextView"
+                            android:fontFamily="@font/kamerik"
+                            android:text="Perfil"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_search"
+                        style="@style/navLinearLayout">
+
+                        <ImageView
+                            style="@style/navImageView"
+                            android:background="@mipmap/sidebar_mostrated" />
+
+                        <TextView
+                            android:id="@+id/txt_search"
+                            style="@style/navTextView"
+                            android:fontFamily="@font/kamerik"
+                            android:text="@string/txt_search_restaurent"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_address"
+                        style="@style/navLinearLayout">
+
+                        <ImageView
+                            style="@style/navImageView"
+                            android:background="@mipmap/maps" />
+
+                        <TextView
+                            android:id="@+id/txt_address"
+                            style="@style/navTextView"
+                            android:fontFamily="@font/kamerik"
+                            android:text="@string/txt_delivery_address2"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_advertise"
+                        style="@style/navLinearLayout">
+
+                        <ImageView
+                            style="@style/navImageView"
+                            android:background="@mipmap/advertising" />
+
+                        <TextView
+                            android:id="@+id/txt_advertise"
+                            style="@style/navTextView"
+                            android:fontFamily="@font/kamerik"
+                            android:text="@string/txt_advertising"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_rated"
+                        style="@style/navLinearLayout">
+
+                        <ImageView
+                            style="@style/navImageView"
+                            android:background="@mipmap/sidebar_search" />
+
+                        <TextView
+                            android:id="@+id/txt_rated"
+                            style="@style/navTextView"
+                            android:fontFamily="@font/kamerik"
+                            android:text="@string/txt_search_on_map"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                    <!--<LinearLayout
+                        android:id="@+id/ll_notification"
+                        style="@style/navLinearLayout">
+
+                        <ImageView
+                            style="@style/navImageView"
+                            android:src="@mipmap/mis_pedidos" />
+
+                        <TextView
+                            style="@style/navTextView"
+                            android:fontFamily="@font/kamerik"
+                            android:text="@string/txt_notification"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_10sdp" />
+                    </LinearLayout>-->
+
+                    <LinearLayout
+                        android:id="@+id/ll_share"
+                        style="@style/navLinearLayout">
+
+                        <ImageView
+                            style="@style/navImageView"
+                            android:background="@mipmap/sidebar_share" />
+
+                        <TextView
+                            android:id="@+id/txt_share"
+                            style="@style/navTextView"
+                            android:fontFamily="@font/kamerik"
+                            android:text="@string/txt_share"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_terms"
+                        style="@style/navLinearLayout">
+
+                        <ImageView
+                            style="@style/navImageView"
+                            android:background="@mipmap/sidebar_terms" />
+
+                        <TextView
+                            android:id="@+id/txt_terms"
+                            style="@style/navTextView"
+                            android:fontFamily="@font/kamerik"
+                            android:text="@string/txt_terms_amp_condition"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_10sdp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_aboutus"
+                        style="@style/navLinearLayout">
+
+                        <ImageView
+                            style="@style/navImageView"
+                            android:background="@mipmap/aboutus" />
+
+                        <TextView
+                            android:id="@+id/txt_aboutus"
+                            style="@style/navTextView"
+                            android:fontFamily="@font/kamerik"
+                            android:text="@string/txt_about_us"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_logout"
+                        style="@style/navLinearLayout">
+
+                        <ImageView
+                            style="@style/navImageView"
+                            android:background="@mipmap/logout" />
+
+                        <TextView
+                            android:id="@+id/txt_logout"
+                            style="@style/navTextView"
+                            android:fontFamily="@font/kamerik"
+                            android:text="@string/txt_signout"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</RelativeLayout>
+
+

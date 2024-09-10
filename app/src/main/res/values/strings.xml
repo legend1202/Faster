@@ -1,0 +1,294 @@
+<resources>
+    <!-- versión app -->
+    <string name="version_app">2.14.21</string>
+    <string name="sistema_operativo">android</string>
+
+    <!--app name-->
+    <string name="app_name">Faster</string>
+    <!--facebook id-->
+    <string name="facebook_app_id" translatable="false">2648566275261209</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb2000030113588408</string>
+
+    <!--google Geo Location api key-->
+    <string name="geoGoogleApi">AIzaSyB_r33kqnaEVtSm8tO6H-L0jBQKgmvnhMg</string>
+    <!--service link-->
+    <string name="link" translatable="false">https://app.faster.com.ec/</string>
+
+    <string name="servicepath" translatable="false">api/</string>
+    <string name="imagepath" translatable="false">uploads/restaurant/</string>
+    <string name="menupath" translatable="false">uploads/submenus/</string>
+
+    <!--General text-->
+    <string name="later_txt">Por favor intente más tarde!</string>
+    <string name="internet_check_error">Por favor revise su conexión a Internet</string>
+    <string name="text_warning">Precaución</string>
+    <string name="colorErrorDialog">#303c44</string>
+    <string name="txt_load_more">Ver Más</string>
+    <string name="loading">Cargando…</string>
+    <string name="currency">$</string>
+    <string name="currenc">X</string>
+    <string name="ok">OK</string>
+    <string name="address">34, Medisam Square, New York Street, New York</string>
+    <string name="servererror">No se encontraron datos</string>
+    <string name="Quit">Salir</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+    <string name="statementquit">¿Estás seguro que deseas salir?</string>
+    <string name="txt_gotogps">Diríjete a configuraciones para activar el GPS</string>
+    <string name="txt_gps_error">El GPS está desactivado en tu dispositivo. Te gustaría activarlo?</string>
+    <string name="txt_try_later">Por favor intente nuevamente!</string>
+    <string name="txt_load">Cargando</string>
+
+    <!--<About Us-->
+    <string name="txt_aboutus">Acerca de Nosotros</string>
+    <string name="aboutus_filename">aboutus.html</string>
+
+    <!--<Terms and condition-->
+    <string name="terms_and_conditions">Términos y Condiciones</string>
+    <string name="terms_condition_filename">tnc.html</string>
+
+    <!--<Most Rated Restaurant-->
+    <string name="txt_most_rated_restaurant">Mejor Valorados</string>
+
+    <!--Cart-->
+    <string name="txt_cart">Tu canasta</string>
+    <string name="txt_advertise">Servicios</string>
+    <string name="txt_checkout">Continuar</string>
+    <string name="norecord">No se encontraron datos</string>
+    <string name="loginmsg">Necesitas iniciar sesión!</string>
+    <string name="BASIC_PRICE">Precio Unitario</string>
+    <string name="QUANTITY">Cantidad</string>
+
+    <!--Category-->
+    <string name="txt_category">Categoria</string>
+    <string name="txt_search">Buscar</string>
+
+    <!--Complete Order-->
+    <string name="order_status">Estado de la Orden</string>
+    <string name="txt_order_no">Orden #</string>
+    <string name="txt_order_amount">Valor de la Orden</string>
+    <string name="txt_delivery_price">Valor de Envío</string>
+    <string name="txt_total_price">Total a Pagar</string>
+    <string name="txt_estimated_delivery_time">Hora estimada de entrega</string>
+    <string name="txt_order_time">Hora de la Orden</string>
+    <string name="txt_complete_order">Actualizar Estado</string>
+
+    <!--Detail Page-->
+    <string name="txt_address">DISTANCIA Y UBICACIÓN</string>
+    <string name="txt_phone_number">Número de teléfono</string>
+    <string name="txt_timing">HORARIO DE ATENCIÓN</string>
+    <string name="txt_food_type">TIPO DE PRODUCTO</string>
+    <string name="txt_delivery_time">TIEMPO DE ENTREGA</string>
+    <string name="txt_delivery_type">TIPO DE ENTREGA</string>
+    <string name="txt_menu">MENÚ</string>
+    <string name="share">Compartir</string>
+    <string name="sharetitle">Puedes compartir tu Tienda favorita con tus amigos 🧡</string>
+    <string name="more">Más</string>
+    <string name="facebook">Facebook</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="km">km</string>
+
+    <!--Login-->
+    <string name="login_with_google">Iniciar sesión con Google</string>
+    <string name="login_with_delivery">Iniciar como Repartidor</string>
+    <string name="login_with_facebook">Iniciar sesión con Facebook</string>
+    <string name="txt_new_register">Registrarse</string>
+    <string name="or">O</string>
+    <string name="txt_login">Iniciar Sesión</string>
+    <string name="txt_password">Contraseña</string>
+    <string name="txt_email">Correo Electrónico</string>
+    <string name="err_msg_password">Contraseña Incorrecta</string>
+    <string name="err_msg_name">Nombre de Usuario Incorrecto</string>
+    <string name="err_msg_email">Ingrese un correo válido</string>
+    <string name="err_msg_nombre">Ingrese su nombre</string>
+
+    <string name="err_msg_address">Seleccione una dirección</string>
+    <string name="err_msg_note">Seleccione una nota</string>
+    <string name="err_msg_prefijo">Seleccione un País</string>
+    <string name="err_msg_alias">Seleccione un alias</string>
+    <string name="err_msg_apellido">Ingrese su nombre y apellido</string>
+    <string name="err_msg_phone">Número de celular Incorrecto</string>
+    <string name="txt_valid_phone_number">Número de celular es correcto</string>
+    <string name="txt_invalid_phonenumber">Número de celular Incorrecto</string>
+    <string name="txt_phone_required">Se requiere un número celular válido</string>
+    <string name="img_delivery">img_delivery</string>
+    <string name="phone_number">NÚMERO CELULAR</string>
+    <string name="phone_description">Le solicitamos su número celular para que nos comuniquemos con usted mientras le entregamos su pedido. También nos aseguramos de que sus datos estén seguros con nosotros y no haremos un uso indebido de sus datos que no sean el propósito de entrega </string>
+
+    <!--Register-->
+    <string name="txt_take_a_picture">Tomar una foto</string>
+    <string name="txt_select_picture">Buscar en Galería</string>
+    <string name="txt_phone_number_2">Número de Celular</string>
+    <string name="txt_cedula">Cédula</string>
+    <string name="hint_email_address">Correo</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="agree_t_and_c"><![CDATA[Acepto los Términos y Condiciones]]></string>
+    <string name="hint_full_name">Nombre y Apellido</string>
+    <string name="signup">Registrarme</string>
+    <string name="register">Registro</string>
+
+    <string name="term">Toca \"Aceptar y continuar\" para aceptar las</string>
+    <string name="mores"> ¿Deseas conocer más sobre nuestro servicio? Ingresa al </string>
+
+    <!--MapActivity-->
+    <string name="txt_map">Tiendas Cercanas</string>
+    <string name="txt_more">MÁS</string>
+    <string name="no_internet">Verifique la conexión a Intenet</string>
+    <string name="no_map">Lo sentimos! no se pudo cargar el mapa</string>
+    <string name="no_restaurant">No existe más Tiendas</string>
+    <string name="opentill">Abierto: Cierra a las \u0020</string>
+    <string name="closetill">Cerrado: Abre a las \u0020</string>
+    <string name="closer">TIENDA CERRADA</string>
+
+    <!--My Order-->
+    <string name="txt_my_orders">Ver Órdenes</string>
+
+    <!--Review-->
+    <string name="txt_review">Reseñas</string>
+    <string name="revlogin">Necesitas iniciar sesión para calificar</string>
+    <string name="review_hint">Por favor escribe sobre tu experiencia personal en este Tienda.</string>
+
+    <!--SettingPage-->
+    <string name="txt_settings">Configuraciones</string>
+    <string name="txt_search_by_radius">Buscar por Radio</string>
+    <string name="txt_distance">Distancia</string>
+    <string name="txt_radius">Radio</string>
+    <string name="txt_current_location">Ciudad actual</string>
+    <string name="action_settings">Configuraciones</string>
+
+    <!--PlaceOrder-->
+    <string name="txt_select_location">¿A dónde te enviamos tu pedido?</string>
+    <string name="txt_select_location2">Seleccione una ubicación</string>
+    <string name="txt_add_location">Información adicional</string>
+    <string name="txt_select_address">Dirección de destino</string>
+    <string name="txt_notes">Descripción de su vivienda</string>
+    <string name="txt_place_order">Calcular valor de envío</string>
+    <string name="notbooked">Por favor intente de nuevo. Su orden no ha sido ingresada.</string>
+    <string name="error_lat_long">Latitud y Longitud no son válidas!</string>
+
+    <!--googleAutoCompleteSearch-->
+    <string name="plese_enter_place">Por favor ingrese el lugar</string>
+
+    <!--Navigation Bar -->
+<!--    <string name="txt_search_restaurent">Buscar Tienda</string>-->
+    <string name="txt_search_restaurent">Menú</string>
+    <string name="txt_delivery_address">Ubicación de entrega</string>
+    <string name="txt_delivery_address2">Mis direcciones</string>
+    <string name="txt_search_on_map">Buscar en el mapa</string>
+    <string name="txt_advertising">Servicios</string>
+    <string name="txt_suggested_restaurent">Mejores Calificados</string>
+    <string name="txt_cusine">Categorías</string>
+    <string name="txt_favourite">Favoritos</string>
+    <string name="txt_share">Compartir</string>
+    <string name="txt_terms_amp_condition"><![CDATA[Términos & Condiciones]]></string>
+    <string name="txt_about_us">Acerca de nosotros</string>
+    <string name="txt_signin">Iniciar sesión</string>
+    <string name="txt_profile">Datos de perfil</string>
+    <string name="txt_myprofile">Mi perfil</string>
+    <string name="txt_notification">Mis pedidos</string>
+    <string name="drawer_open">abierto</string>
+    <string name="drawer_close">cerrado</string>
+
+    <!--MainActivity-->
+    <string name="txt_home_header">Inicio</string>
+    <string name="search">Busca tiendas o productos</string>
+    <string name="search_advertise">Busca servicios, empresas o negocios</string>
+    <string name="txt_signout">Cerrar Sesión</string>
+    <string name="noorder">Todavía no ha realidado pedidos!</string>
+    <string name="error_logout">Estás seguro que deseas cerrar sesión?</string>
+
+    <!--Place order-->
+    <string name="confirmorder1">Your order is placed with item</string>
+    <string name="confirmorder2">;El monto total es</string>
+    <string name="txt_description">Descripción=</string>
+    <string name="txt_price">Precio=</string>
+    <string name="txt_quantity">Cantidad=</string>
+    <string name="txt_total">TOTAL</string>
+
+    <!--CompleteOrder Timeline order status-->
+    <string name="timelineo1">Se ha ingresado tu pedido</string>
+    <string name="timelineo2">Se ha preasignado un repartidor</string>
+    <string name="timelineo3">La tienda está preparando tu pedido</string>
+    <string name="timelineo4">Se ha enviado tu pedido con un repartidor</string>
+    <string name="timelineo5">Tu pedido ha llegado</string>
+    <string name="timeline6">La Orden ha sido rechazada por la Tienda</string>
+    <string name="timeline7">No se ha tenido respuesta de la Tienda</string>
+    <string name="timeline8">No se ha tenido respuesta de repartidores</string>
+
+    <!--Login as delivery-->
+    <string name="delivery_boy_login">Repatidores</string>
+    <string name="email_required">Se requiere correo electrónico</string>
+    <string name="phone_required">Número de teléfono celular</string>
+    <string name="passward_required">Se requiere una contraseña</string>
+    <string name="txt_setPresence">Estás Disponible?</string>
+    <string name="no_order_left">Aún no tiene ninguna entrega pendiente, permanezca en línea y recibirá la entrega pronto.</string>
+    <string name="txt_call_customer">Llamar al Cliente</string>
+    <string name="txt_call_rider">Llamar al Repartidor</string>
+    <string name="txt_view_map">Ver en el Mapa</string>
+    <string name="txt_order_history">Mis Órdenes</string>
+    <string name="txt_my_profile">Mi Perfil</string>
+    <string name="txt_sign_out">Cerrar Sesión</string>
+    <string name="txt_delivery_boy">Repartidor</string>
+    <string name="txt_order_specifications">Especificaciones de la Orden</string>
+
+    <string name="cancle">Cancelar</string>
+    <string name="order_complete">Has completado la orden asignada.</string>
+    <string name="allready_given">Ya se ha dado recomendaciones</string>
+    <string name="cart_empty">Tu carrito no tiene órdenes</string>
+    <string name="login">Inicio Sesión Correctamente</string>
+    <string name="user_connect">Usuario está conectado</string>
+    <string name="conti">Continue..</string>
+    <string name="log_out">Cerrar Sesión?</string>
+    <string name="delivery_information">Dirección de Entrega</string>
+    <string name="paymet">Pago</string>
+    <string name="items">Items</string>
+    <string name="order_amount">Monto de la Orden</string>
+    <string name="your_experience">Tu Experiencia</string>
+    <string name="your_rating">TUS RESEÑAS</string>
+    <string name="hint">Por favor escribe sobre tu experiencia personal en esta Tienda.</string>
+    <string name="submit">Enviar</string>
+    <string name="no_review">No hay reseñas disponibles</string>
+    <string name="thanks_you">Gracias por tus sugerencias</string>
+    <string name="thanks">Gracias</string>
+    <string name="review">Califique Por favor</string>
+    <string name="need_login_for_review">Necesitas iniciar sesión para calificar</string>
+    <string name="open_till"> Abierto: Cierra a las \u0020</string>
+    <string name="close"> Cerrado: Abre a las \u0020</string>
+    <string name="Minute">Minutos</string>
+    <string name="ratings">Posición</string>
+    <string name="_15_reviews">(15 Reseñas)</string>
+    <string name="picked">ACEPTAR ORDEN</string>
+    <string name="complete">ORDEN ENTREGADA</string>
+    <string name="order_piked_for_delivery">Te has comprometido a entregar el pedido.</string>
+    <string name="select_terms">Acepte los Términos y Condiciones</string>
+    <string name="choose_profile">Elija su foto de perfil</string>
+    <string name="reg">Se ha registrado correctamente</string>
+    <string name="msg">Almacenamiento</string>
+    <string name="mssg">Necesitas permisos para subir la imagen!</string>
+    <string name="please_wait">Por favor espere</string>
+
+    <string name="need_location">Habilitar servicio GPS</string>
+    <string name="location_content">Esta aplicación quiere cambiar la configuración de su dispositivo usando GPS, Wi-Fi y redes Móviles para tu ubicación
+    </string>
+    <string name="total_online_drivers">Total Online Drivers :</string>
+
+    <!--Edit location-->
+    <string name="txt_address1">Dirección*</string>
+    <string name="txt_flat_apartment">Piso/Apartamento*</string>
+    <string name="txt_secondary_street">Calle secundaria</string>
+    <string name="txt_delivery_note">¿Alguna nota para la entrega?*</string>
+    <string name="txt_country_code">Codigo de país</string>
+    <string name="txt_contant_phone">Si no te encontramos en el teléfono de tu cuenta, te contactaremos a este numero.</string>
+    <string name="txt_alias">Alias*</string>
+    <string name="txt_ex_home">Ej: Casa</string>
+    <string name="txt_keep">Guardar</string>
+    <bool name="default_circle_indicator_snap">false</bool>
+    <bool name="default_circle_indicator_centered">true</bool>
+    <integer name="default_circle_indicator_orientation">0</integer>
+
+    <string name="search_hint_text">Search…</string>
+    <string name="no_result_found">Results not found</string>
+    <string name="select_country">Select a country</string>
+    <string name="dismiss_button_content_description">Dismiss</string>
+    <string name="clear_search_button_content_description">Clear search</string>
+</resources>

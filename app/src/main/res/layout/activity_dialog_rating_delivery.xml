@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFF"
+    tools:context=".fooddelivery.OrderInfo">
+
+    <RelativeLayout
+        android:id="@+id/rl_text"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/title_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Tu pedido ha llegado"
+            android:textColor="#fff"
+            tools:ignore="SpUsage"
+            android:textSize="20dp"
+            android:fontFamily="@font/kamerik"/>
+
+    </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/rl_text">
+
+            <RelativeLayout
+                android:id="@+id/rel_main"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp">
+
+                <RelativeLayout
+                    android:id="@+id/rel_img"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerVertical="true">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        app:cardCornerRadius="8dp">
+
+                        <ImageView
+                            android:id="@+id/image"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:fitsSystemWindows="true"
+                            android:requiresFadingEdge="horizontal"
+                            android:scaleType="fitXY" />
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rel_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/rel_img"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/rel_img">
+
+                    <TextView
+                        android:id="@+id/txt_name2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:text="Repartidor de"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        tools:ignore="SpUsage" />
+
+                    <TextView
+                        android:id="@+id/txt_name"
+                        android:layout_width="wrap_content"
+                        android:layout_below="@+id/txt_name2"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:text="Royal Restaurant"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/medium"
+                        tools:ignore="SpUsage" />
+
+                    <TextView
+                        android:id="@+id/txt_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_name"
+                        android:layout_marginTop="5dp"
+                        android:lines="1"
+                        android:text="4,street,Ney York Central,New York,12359 "
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/lightGrey"
+                        android:textSize="@dimen/dp_12"
+                        tools:ignore="SpUsage" />
+
+                    <TextView
+                        android:id="@+id/txt_contact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_address"
+
+                        android:maxLines="1"
+                        android:text="+09-6565625-52"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/lightGrey"
+                        android:textSize="@dimen/dp_12"
+                        tools:ignore="SpUsage" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:layout_below="@id/rel_title"
+                android:stretchColumns="1">
+            <TableRow>
+                <TextView
+                    android:layout_column="0"
+                    android:padding="3dip"
+                    android:text="Valor del Pedido"
+                    android:textColor="#000000"
+                    android:textSize="15dp"/>
+                <TextView
+                    android:id="@+id/txt_order_price"
+                    android:layout_column="1"
+                    android:gravity="right"
+                    android:padding="3dip"
+                    android:text="$0,00"
+                    android:textColor="#000000"
+                    android:textSize="15dp"/>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_column="0"
+                    android:padding="3dip"
+                    android:text="Valor del Envío"
+                    android:textColor="#000000"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:id="@+id/txt_delivery_price"
+                    android:layout_column="1"
+                    android:gravity="right"
+                    android:padding="3dip"
+                    android:text="$0,00"
+                    android:textColor="#000000"
+                    android:textSize="15dp"/>
+            </TableRow>
+
+            <View
+                android:layout_height="2dip"
+                android:background="#FF909090" />
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txt_total_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:padding="3dip"
+                    android:text="Total a Pagar"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/txt_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:padding="3dip"
+                    android:text="$0,00"
+                    android:textColor="#000000"
+                    android:textSize="15dp"
+                    android:textStyle="bold"/>
+            </TableRow>
+
+            </TableLayout>
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#ff9e00">
+
+                <RelativeLayout
+                    android:id="@+id/rel_call"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/divider1">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="horizontal"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/btn_call"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:maxLines="1"
+                            android:textAllCaps="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="5dp"
+                            android:gravity="start|center_vertical"
+                            android:text="Llamar Repartidor"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/louisgeorgecafe"
+                            android:textSize="16dp"
+                            tools:ignore="SpUsage" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/divider1"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:src="@color/black" />
+
+                <RelativeLayout
+                    android:id="@+id/rel_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/divider1">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="horizontal"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_marginEnd="8dp"
+                            app:tint="@color/white"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/cart_icon_fab" />
+
+                        <TextView
+                            android:id="@+id/txt_orderno"
+                            style="@style/Delivery_button"
+                            android:layout_width="wrap_content"
+                            android:text="Ver Pedido"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/louisgeorgecafe"
+                            android:textSize="16dp"
+                            tools:ignore="SpUsage" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rel_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_map"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center">
+
+
+                <TextView
+                    android:id="@+id/txt_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="¡Para mejorar nuestro servicio puedes calificar tu experiencia!"
+                    android:gravity="center"
+                    android:textColor="@color/lightGrey"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/kamerik"
+                    tools:ignore="SpUsage" />
+
+                    <RatingBar
+                        android:id="@+id/rate1234"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:isIndicator="false"
+                        android:numStars="5"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/txt_text"
+                        android:progressTint="@color/dorado"
+                        android:scaleX="1.0"
+                        android:scaleY="1.0"
+                        android:secondaryProgressTint="@android:color/transparent"
+                        android:stepSize="1.0"
+                        android:transformPivotX="0dp" />
+
+
+
+                    <TextView
+                        android:id="@+id/txt_ratenumber1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="-46dp"
+                        android:gravity="center_vertical"
+                        android:text="0.0"
+                        android:textColor="#000000"
+                        android:textSize="20dp"
+                        tools:ignore="SpUsage"
+                        android:visibility="invisible"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_review"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rate1234"
+                    android:focusable="true"
+                    android:layout_marginStart="10dp"
+                    android:paddingStart="8dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="0dp">
+
+                    <EditText
+                        android:id="@+id/edt_review"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/rel_text"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="40dp"
+                        android:gravity="top|start"
+                        android:hint="Comenta tu experiencia personal con el repartidor."
+                        android:includeFontPadding="false"
+                        android:inputType="textMultiLine"
+                        android:lines="3"
+                        android:maxLines="3"
+                        android:paddingStart="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="0dp"
+                        android:fontFamily="@font/louisgeorgecafe"
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        tools:ignore="SpUsage" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rel_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_rating_deliveryboy"
+            style="@style/Widget.AppCompat.Button"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/checkout_btn"
+            android:text="Calificar"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/kamerik"
+            android:textSize="@dimen/medium"
+            tools:ignore="SpUsage" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
